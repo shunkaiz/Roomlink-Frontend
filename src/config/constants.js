@@ -1,0 +1,1 @@
+export const IMAGE_URL = window.location.protocol + '//' + window.location.host + "/images";

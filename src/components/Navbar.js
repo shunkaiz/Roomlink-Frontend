@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
+import { ReactTypeformEmbed } from 'react-typeform-embed';
 import {withStyles} from "@material-ui/core/styles/index";
-import MenuIcon from '@material-ui/icons/Menu';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 
 const styles = theme => ({
     logoBox:{
@@ -23,8 +20,11 @@ const styles = theme => ({
     navLogo:{
 
     },
+    navButtonContainer:{
+
+    },
     navButtonRoot:{
-        width: '105px',
+        width: '155px',
         height: '25px',
         borderWidth: '2px',
         borderColor: 'transparent',
@@ -34,13 +34,24 @@ const styles = theme => ({
         fontWeight: '400',
         fontSize: '12px',
         lineHeight: '25px'
+    },
+    formButton:{
+        fontFamily: 'raleway',
+        fontSize: '12px',
+        lineHeight: '25px',
+        fontWeight: '700',
     }
 });
 
 class NavBar extends Component{
 
+    openForm =()=>{
+        this.typeformEmbed.typeform.open();
+    };
+
     render(){
         const {classes} = this.props;
+        const typeformURL = "https://haochen633226.typeform.com/to/S86bK0";
         return(
             <Grid container
                   direction="row"
@@ -55,10 +66,24 @@ class NavBar extends Component{
                 </div>
 
                 <div className={classes.navButtonContainer}>
-                    <Button classes={{root: classes.navButtonRoot, label: classes.navButtonLabel}} href={'/'}>HOME</Button>
-                    <Button classes={{root: classes.navButtonRoot, label: classes.navButtonLabel}} href={'/'}>TAB1</Button>
-                    <Button classes={{root: classes.navButtonRoot, label: classes.navButtonLabel}} href={'/'}>TAB2</Button>
+                    <Button classes={{root: classes.navButtonRoot, label: classes.navButtonLabel}} href={'#'}>HOME</Button>
+                    <Button classes={{root: classes.navButtonRoot, label: classes.navButtonLabel}} href={'#'}>ABOUT US</Button>
+                    <Button classes={{root: classes.navButtonRoot, label: classes.formButton}}
+                            href={'#'}
+                            outlined
+                            onClick={this.openForm}>LETS START</Button>
                 </div>
+
+                <ReactTypeformEmbed popup url={"https://demo.typeform.com/to/njdbt5"}
+                                    autoOpen={false}
+                                    ref={tf => {
+                                        this.typeformEmbed = tf;
+                                    }}
+                                    hideHeaders
+                                    hideFooter
+                                    buttonText="Go!"
+                                    style={{ top: 100 }}
+                />
 
             </Grid>
         );

@@ -3,6 +3,7 @@ import '../styles/App.css';
 import Grid from '@material-ui/core/Grid';
 import NavBar from '../components/Navbar';
 import ImageSlider from '../components/ImageSlider'
+import Body from '../components/Body'
 import {withStyles} from "@material-ui/core/styles/index";
 
 const styles = theme => ({
@@ -22,12 +23,10 @@ class App extends Component {
         const {classes} = this.props;
         return (
             <Grid container spacing={0} classes={{container: classes.body}}>
-                <Grid item xs={12} classes={{item: classes.navBar}}>
-                    <NavBar/>
-                </Grid>
-                <Grid item xs={12}>
-                    <ImageSlider/>
-                </Grid>
+                <NavBar/>
+                <ImageSlider/>
+                <Body/>
+
             </Grid>
         );
     }

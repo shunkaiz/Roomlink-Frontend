@@ -18,7 +18,10 @@ const styles = theme => ({
 
     },
     navLogo:{
-
+        fontSize: '26px',
+        marginBottom: '-10px',
+        display: 'inline-block',
+        textDecoration: 'none',
     },
     navButtonContainer:{
 
@@ -61,7 +64,9 @@ class NavBar extends Component{
             >
                 <div className={classes.logoContainer}>
                     <a className= {classes.navLogo} href={window.location.href}>
-                        <div className={classes.logoBox}/>
+                        <div className={classes.logoBox}>
+                            LOGO
+                        </div>
                     </a>
                 </div>
 

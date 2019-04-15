@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import { ReactTypeformEmbed } from 'react-typeform-embed';
 import {withStyles} from "@material-ui/core/styles/index";
 
 const styles = theme => ({
@@ -48,10 +47,6 @@ const styles = theme => ({
 
 class NavBar extends Component{
 
-    openForm =()=>{
-        this.typeformEmbed.typeform.open();
-    };
-
     render(){
         const {classes} = this.props;
         const typeformURL = "https://haochen633226.typeform.com/to/S86bK0";
@@ -74,21 +69,9 @@ class NavBar extends Component{
                     <Button classes={{root: classes.navButtonRoot, label: classes.navButtonLabel}} href={'#'}>HOME</Button>
                     <Button classes={{root: classes.navButtonRoot, label: classes.navButtonLabel}} href={'#'}>ABOUT US</Button>
                     <Button classes={{root: classes.navButtonRoot, label: classes.formButton}}
-                            href={'#'}
-                            outlined
-                            onClick={this.openForm}>LETS START</Button>
+                            href={'#body'}
+                    >LETS START</Button>
                 </div>
-
-                <ReactTypeformEmbed popup url={"https://demo.typeform.com/to/njdbt5"}
-                                    autoOpen={false}
-                                    ref={tf => {
-                                        this.typeformEmbed = tf;
-                                    }}
-                                    hideHeaders
-                                    hideFooter
-                                    buttonText="Go!"
-                                    style={{ top: 100 }}
-                />
 
             </Grid>
         );

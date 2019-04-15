@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Roomlink-Frontend/precache-manifest.1adc46f0344884ae67b29121bc3d49ee.js"
+  "/Roomlink-Frontend/precache-manifest.de0fe911a29d8493b28a00def5da6f0b.js"
 );
 
 workbox.clientsClaim();

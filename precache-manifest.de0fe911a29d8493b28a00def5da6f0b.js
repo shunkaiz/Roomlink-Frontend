@@ -20,19 +20,19 @@ self.__precacheManifest = [
     "url": "/Roomlink-Frontend/static/js/runtime~main.42401caf.js"
   },
   {
-    "revision": "356d7413dbc2f63d9970",
-    "url": "/Roomlink-Frontend/static/js/main.e8f27c79.chunk.js"
+    "revision": "af3f7d3b029e917eb3ef",
+    "url": "/Roomlink-Frontend/static/js/main.ea464d29.chunk.js"
   },
   {
-    "revision": "224306e603de7863b280",
-    "url": "/Roomlink-Frontend/static/js/2.3b621129.chunk.js"
+    "revision": "4ec713e2c357ac19cb1a",
+    "url": "/Roomlink-Frontend/static/js/2.29818485.chunk.js"
   },
   {
-    "revision": "356d7413dbc2f63d9970",
+    "revision": "af3f7d3b029e917eb3ef",
     "url": "/Roomlink-Frontend/static/css/main.fd553984.chunk.css"
   },
   {
-    "revision": "deda8d2c2a0778129211c5640338863a",
+    "revision": "a5e50e5314527a23ecee7bdb2fd86561",
     "url": "/Roomlink-Frontend/index.html"
   }
 ];
